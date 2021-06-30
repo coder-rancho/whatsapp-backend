@@ -33,3 +33,6 @@ Note : This repo is a continuation of [coder-rancho/whatsapp-mern](https://githu
     + connect database using mongoose 
     after some time, mongodb cluster will show connection to your application
 
+5. #### Define data(message content) Schema
+  + Create **./dbMessages.js**
+  + define `whatsappSchema` object and export

@@ -10,7 +10,7 @@ const port = process.env.PORT || 9000;
 
 
 // DB config 
-const connection_url = 'mongodb+srv://admin:Tsbg0xOGCzV0rjCW@cluster0.po3by.mongodb.net/whatsappdb?retryWrites=true&w=majority';
+const connection_url = process.env.CONNECTION_URL
 const db_configuration = {
     useCreateIndex: true,
     useNewUrlParser: true,
