@@ -1,8 +1,11 @@
 // importing
 import express from 'express'
 import mongoose from 'mongoose'
+import dotenv from 'dotenv'
+
 
 // app config
+dotenv.config();
 const app = express();
 const port = process.env.PORT || 9000;
 
@@ -17,6 +20,10 @@ const db_configuration = {
     useUnifiedTopology: true
 }
 mongoose.connect(connection_url, db_configuration)
+.then(() => console.log("successfully connected"))
+.catch((err) => console.log(err.message))
+
+
 // ??????? --> surprise functionality
 
 
