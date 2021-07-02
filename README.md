@@ -36,3 +36,15 @@ Note : This repo is a continuation of [coder-rancho/whatsapp-mern](https://githu
 5. #### Define data(message content) Schema
   + Create **./dbMessages.js**
   + define `whatsappSchema` object and export
+
+***
+<div >
+    <strong>Edit connection_url</strong><br>
+    <ul>
+        <li>connenction url is wrong, it'll give 'Error 505' for any operation on DB</li>
+        <li><a href="https://stackoverflow.com/questions/58617287/unhandledpromiserejectionwarning-mongoerror-w-has-to-be-a-number-or-a-string-a">See stackoverflow's answer</a></li>
+    </ul>
+    Note: your connection url is in .env file, edit it there.
+</div>
+***
+
