@@ -37,9 +37,21 @@ Note : This repo is a continuation of [coder-rancho/whatsapp-mern](https://githu
   + Create **./dbMessages.js**
   + define `whatsappSchema` object and export
 
+***
+<div >
+    <strong>Edit connection_url</strong><br>
+    <ul>
+        <li>connenction url is wrong, it'll give 'Error 505' for any operation on DB</li>
+        <li><a href="https://stackoverflow.com/questions/58617287/unhandledpromiserejectionwarning-mongoerror-w-has-to-be-a-number-or-a-string-a">See stackoverflow's answer</a></li>
+    </ul>
+    Note: your connection url is in .env file, edit it there.
+</div>
+***
+
 6. #### write database APIs in server.js (require mongoose)
   + write app.post('/messages/new', callBack) (require './dbMessages.js')
       + receive data into server (sent via postman >> POST >> raw >> json)
       + insert into database using `model.create()` method of mongoose
       + require `express.json()` middleware to parse data(in json)
         + `req.body` contain data as javaScript object
+
