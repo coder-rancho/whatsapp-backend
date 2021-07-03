@@ -54,4 +54,7 @@ Note : This repo is a continuation of [coder-rancho/whatsapp-mern](https://githu
       + insert into database using `model.create()` method of mongoose
       + require `express.json()` middleware to parse data(in json)
         + `req.body` contain data as javaScript object
+  + write app.get('/messages/sync', callback)
+      + receive data from DB using `model.find()` method of mongoose
+      + send to application (if no err)
 
