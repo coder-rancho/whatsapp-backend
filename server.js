@@ -3,12 +3,21 @@ import express from 'express'
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
 import Messages from './dbMessages.js'
+import Pusher from 'pusher'
 
 
 // app config
 dotenv.config();
 const app = express();
 const port = process.env.PORT || 9000;
+
+const pusher = new Pusher({
+    appId: "1229251",
+    key: "263306ff9a8df1dfa5ed",
+    secret: "94b1f398f5552d32d090",
+    cluster: "ap2",
+    useTLS: true
+  });
 
 // middleware 
 app.use(express.json());
@@ -21,11 +30,31 @@ const db_configuration = {
     useUnifiedTopology: true
 }
 mongoose.connect(connection_url, db_configuration)
-.then(() => console.log("successfully connected"))
-.catch((err) => console.log(err.message))
 
+const db = mongoose.connection;
 
-// ??????? --> surprise functionality
+db.once('open', () => {
+    console.log('DB is connected');
+
+    const msgCollection = db.collection('messagecontents')
+    const changeStream = msgCollection.watch()
+
+    changeStream.on('change', (change) => {
+        console.log('a change occurred in changeStream');
+
+        if (change.operationType === 'insert') {
+            const messageDetails = change.fullDocument;
+            pusher.trigger('messages', 'inserted',
+            {
+                name: messageDetails.name,
+                messages: messageDetails.message
+            });
+        } else {
+            console.log("Error triggering Pusher")
+        }
+    });
+})
+
 
 
 // api routes

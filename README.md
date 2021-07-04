@@ -58,3 +58,11 @@ Note : This repo is a continuation of [coder-rancho/whatsapp-mern](https://githu
       + receive data from DB using `model.find()` method of mongoose
       + send to application (if no err)
 
+7. #### Incorporate [Pusher](www.pusher.com "Make mongoDB realtime") 2:50:00 - 2:57:50 (require pusher)
+  > Pusher acts like a middleware btw mongoDB and our application. It basically enables a two way communication that means any change in DB will trigger the application and vice versa.
+  + pusher.com >> signup >> channels >> choose options >> copy code >> paste in app.config
+  + **create change stream** 2:59:13 - 3:03:00
+  + test using postman (get/post request)
+  + trigger pusher on changeStream 
+      + see changes on pusher.com >> whatsapp-mern >> Debug console
+  
