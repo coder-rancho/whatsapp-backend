@@ -66,12 +66,12 @@ Note : This repo is a continuation of [coder-rancho/whatsapp-mern](https://githu
   + trigger pusher on changeStream 
       + see changes on pusher.com >> whatsapp-mern >> Debug console
   
-  8. #### add setHeader middleware
-    + Do not add this in production app (security risk)
+8. #### add setHeader middleware
+  + Do not add this in production app (security risk)
 
-  9. #### sync frontend to backend 3:15:00 -  
-    + go to pusher.com >> whatsapp-mern >> Getting started >> copy code
-    + paste in app.js (frontend) 3:20:00 - 
-    + Replace setHeaders with cors (require cors)
-    + [See changes in app.js](https://github.com/coder-rancho/whatsapp-mern/commit/364b62fc0e71018daa836b0ad3a38892da4e5ace#diff-3d74dddefb6e35fbffe3c76ec0712d5c416352d9449e2fcc8210a9dee57dff67)
-    + [Fetch messages from DB into app](https://github.com/coder-rancho/whatsapp-mern/commit/d32c0b52c467ca3f922de315e0cdf9d85b01af55)
+9. #### sync frontend to backend 3:15:00 -  
+  + go to pusher.com >> whatsapp-mern >> Getting started >> copy code
+  + paste in app.js (frontend) 3:20:00 - 
+  + Replace setHeaders with cors (require cors)
+  + [See changes in app.js](https://github.com/coder-rancho/whatsapp-mern/commit/364b62fc0e71018daa836b0ad3a38892da4e5ace#diff-3d74dddefb6e35fbffe3c76ec0712d5c416352d9449e2fcc8210a9dee57dff67)
+  + [Fetch messages from DB into app](https://github.com/coder-rancho/whatsapp-mern/commit/d32c0b52c467ca3f922de315e0cdf9d85b01af55)
