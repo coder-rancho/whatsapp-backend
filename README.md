@@ -73,3 +73,4 @@ Note : This repo is a continuation of [coder-rancho/whatsapp-mern](https://githu
     + go to pusher.com >> whatsapp-mern >> Getting started >> copy code
     + paste in app.js (frontend) 3:20:00 - 
     + Replace setHeaders with cors (require cors)
+    + [See changes in app.js](https://github.com/coder-rancho/whatsapp-mern/commit/364b62fc0e71018daa836b0ad3a38892da4e5ace#diff-3d74dddefb6e35fbffe3c76ec0712d5c416352d9449e2fcc8210a9dee57dff67)
