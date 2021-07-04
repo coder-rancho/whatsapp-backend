@@ -68,3 +68,8 @@ Note : This repo is a continuation of [coder-rancho/whatsapp-mern](https://githu
   
   8. #### add setHeader middleware
     + Do not add this in production app (security risk)
+
+  9. #### sync frontend to backend 3:15:00 -  
+    + go to pusher.com >> whatsapp-mern >> Getting started >> copy code
+    + paste in app.js (frontend) 3:20:00 - 
+    + Replace setHeaders with cors (require cors)
