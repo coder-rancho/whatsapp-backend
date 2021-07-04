@@ -49,7 +49,7 @@ db.once('open', () => {
             pusher.trigger('messages', 'inserted',
             {
                 name: messageDetails.name,
-                messages: messageDetails.message,
+                message: messageDetails.message,
                 timestamp: messageDetails.timestamp,
                 received: messageDetails.received,
             });
